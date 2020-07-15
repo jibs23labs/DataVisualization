@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script>
+
+  $.get('svg/testartboard.svg', function(data) {
+    $(document.body).append(data.documentElement);
+
+    // tooltip logic
+    $('#circle1').hover(
+      function mouseover() {
+        $('#tooltip1').show();
+      },
+      function mouseleave() {
+        $('#tooltip1').hide();
+      }
+    );
+
+
+    // tooltip logic
+    $("#circle2").click(function(){
+        $("#tooltip2").fadeToggle();
+    });
+
+
+    // tooltip logic
+    $('#circle3').hover(
+      function mouseover() {
+        $('#tooltip3').show();
+      },
+      function mouseleave() {
+        $('#tooltip3').hide();
+      }
+    );
+
+  });
+
+</script>
+
+
+
+<head>
+<title>Indian Mobile Users</title>
+
+<link rel="icon" href="image/favicon.png" type="image/png" />
+
+</head>
+
+
+
+
+<body>
+ <!-- <object data="svg/testartboard.svg" width="100%"></object> -->
+</body>
+
+</html>
